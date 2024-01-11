@@ -1,0 +1,28 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+
+<div class="container" style="text-align: center;">
+  <h1 style="color: lightseagreen;">Usuários Cadastrados</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>sobrenome</th>
+            <th>nascimento</th>
+            <th>phone</th>
+            <th>email</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.id_usuario}}</td>
+            <td>{{usuario.name}}</td>
+            <td>{{usuario.sobrenome}}</td>
+            <td>{{usuario.nascimento}}</td>
+            <td>{{usuario.phone}}</td>
+            <td>{{usuario.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
